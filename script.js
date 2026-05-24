@@ -3,5 +3,5 @@ formTag.onsubmit =handleSubmit;
 
 function handleSubmit(event){
     event.preventDefault();
-    cosnt formTag = event.target;
+    const formTag = event.target;
 }
