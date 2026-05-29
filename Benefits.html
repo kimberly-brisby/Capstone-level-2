@@ -4,21 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+  rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+<script src="https://cdn.tailwindcss.com/3.3.0"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        body: ["Roboto", "sans-serif"],
+        mono: ["ui-monospace", "monospace"],
+      },
+    },
+    corePlugins: {
+      preflight: false,
+    },
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
 </head>
 <body>
    <header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="Home-School.html">School</a>
-        <a href="Benefits.html">Benefits</a>
-        <a href="Obstacles.html">Obstacles</a>
-        <a href="Attribute.html">About</a>
-    </nav>
+<!--Tabs navigation-->
+<ul
+  class="mb-5 flex list-none flex-row flex-wrap border-b-0 ps-0"
+  role="tablist"
+  data-twe-nav-ref>
+  <li role="presentation">
+    <a
+      href="index.html"
+      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:border-primary data-[twe-nav-active]:text-primary dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+      data-twe-toggle="pill"
+      data-twe-target="#tabs-home"
+      data-twe-nav-active
+      role="tab"
+      aria-controls="tabs-home"
+      aria-selected="true"
+      >Home</a
+    >
+  </li>
+  <li role="presentation">
+    <a
+      href="Benefits.html"
+      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:border-primary data-[twe-nav-active]:text-primary dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+      data-twe-toggle="pill"
+      data-twe-target="#tabs-benefits"
+      role="tab"
+      aria-controls="tabs-benefits"
+      aria-selected="false"
+      >Benefits</a>
+
+  </li>
+  <li role="presentation">
+    <a
+      href="Obstacles.html"
+      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:border-primary data-[twe-nav-active]:text-primary dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+      data-twe-toggle="pill"
+      data-twe-target="#tabs-obstacles"
+      role="tab"
+      aria-controls="tabs-obstacles"
+      aria-selected="false"
+      >Obstacles</a
+    >
+  </li>
+  <li role="presentation">
+    <a
+      href="Resources.html"
+      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent bg-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-400 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent dark:text-neutral-600"
+      data-twe-toggle="pill"
+      data-twe-target="#tabs-resources"
+      role="tab"
+      aria-controls="tabs-resources"
+      aria-selected="false"
+      >Resources</a
+    >
+  </li>
+</ul>
    </header>
+   <br>
    <main>
-    <h1>The Benefits of Home School.</h1>
+    <figure id="home-figure">
+    <img src = "school-times.jpg" alt="school supplies">
+    <figcaption></figcaption>
+    </figure>
+    <article id="benefit-page">
+      <ul>
+        <li>
+          Flexibale learning envrionment: The freedom to learn how, where, and when you please. 
+          <!-- you set the hours, rather to go traditional, unschool, the possibilities are endless -->
+        </li>
+        <li>
+          The change of the pace: It is easier to pace your child(ren) acadaimic growth. 
+          <!-- if your child is having issues in a subject you can take time to work at it until the master it, and een on the other end they can quickly move through subjects. -->
+        </li>
+        <li>
+          Envrionment: Yes several parents fear of safty can be greatly reduced from outside hazards.
+          <!-- they can learn in an envirnment bully-free, classroom distractions, and even overwhelming peer pressure -->
+        </li>
+        <li>
+          Targeted Social groups: you can set up inter-actions with like minded community.
+          <!-- you select the peer groups and community and outings that you deem are right for your child(ren). -->
+        </li>
+      </ul>
+      
+    </article>
+    <buton>submit</buton>
    </main>
    <footer></footer> 
 </body>
