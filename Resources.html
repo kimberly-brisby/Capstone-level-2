@@ -32,6 +32,7 @@
 </head>
 <body>
    <header>
+<div id="navigation">
     <!--Tabs navigation-->
 <ul
   class="mb-5 flex list-none flex-row flex-wrap border-b-0 ps-0"
@@ -52,28 +53,17 @@
   </li>
   <li role="presentation">
     <a
-      href="Benefits.html"
+      href="Benefits-Obstacles.html"
       class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:border-primary data-[twe-nav-active]:text-primary dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
       data-twe-toggle="pill"
       data-twe-target="#tabs-benefits"
       role="tab"
       aria-controls="tabs-benefits"
       aria-selected="false"
-      >Benefits</a>
+      >Benefits-Obstacles</a>
 
   </li>
-  <li role="presentation">
-    <a
-      href="Obstacles.html"
-      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:border-primary data-[twe-nav-active]:text-primary dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
-      data-twe-toggle="pill"
-      data-twe-target="#tabs-obstacles"
-      role="tab"
-      aria-controls="tabs-obstacles"
-      aria-selected="false"
-      >Obstacles</a
-    >
-  </li>
+  
   <li role="presentation">
     <a
       href="Resources.html"
@@ -87,12 +77,64 @@
     >
   </li>
 </ul>
+</div>
 <br>
- <h1>Resources: the help</h1>
+
+ <h1>Resources: the Helpful</h1>
+ <br>
+ <form id="review">
+<fieldset>
+      <legend>Content Review</legend>
+      <div class="flex justify-center">
+  <!--First radio-->
+  <div class="mb-[0.125rem] me-4 inline-block min-h-[1.5rem] ps-[1.5rem]">
+    <input
+      class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
+      type="radio"
+      name="inlineRadioOptions"
+      id="inlineRadio1"
+      value="option1" />
+    <label
+      class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
+      for="inlineRadio1"
+      >Great</label
+    >
+  </div>
+
+  <!--Second radio-->
+  <div class="mb-[0.125rem] me-4 inline-block min-h-[1.5rem] ps-[1.5rem]">
+    <input
+      class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
+      type="radio"
+      name="inlineRadioOptions"
+      id="inlineRadio2"
+      value="option2" />
+    <label
+      class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
+      for="inlineRadio2"
+      >Okay</label
+    >
+  </div>
+
+  <!--Third radio -->
+  <div class="mb-[0.125rem] me-4 inline-block min-h-[1.5rem] ps-[1.5rem]">
+    <input
+       class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
+      type="radio"
+      name="inlineRadioOptions"
+      id="inlineRadio3"
+      value="option3" />
+    <label
+      class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
+      for="inlineRadio3"
+      >Needs Improvment</label
+    >
+  </div>
+</div>
+</fieldset>
+    </form>
    </header>
-   
    <main>
-     
        <figure id="home-figure">
         <img
   src="Never-stop_leaning.jpg"
@@ -100,19 +142,45 @@
   alt="girl behind books saying never stop learning" />
     <figcaption></figcaption>
     </figure> 
-    <p class="mb-4 font-bold">Resources options list to homeschool:</p>
-    
-    <br>
+    <p class="mb-6 font-bold">Resources list to homeschool:</p>
+ 
     <ul class="ms-6 list-disc">
       <li><a href="https://hslda.org">Homeschool Laws by State</a></li>
       <li><a href="https://discoveryk12.com">DiscoveryK12</a></li>
+      <h6>k-12 curriculum</h6>
       <li><a href="https://anton.app">Anton</a></li>
+      <h6>pk-8th curriculum</h6>
       <li> <a href="https://www.doulingo.com">Doulingo</a></li>
+      <h6>foreign languages</h6>
       <li><a href="https://www.abcmouse.com">abcmouse</a></li>
+      <h6>pk-3rd curriculum</h6>
       <li><a href="https://www.elephantlearning.com">Elephant Learning</a></li>
+      <h6>math</h6>
       <li> <a href="https://www.readingeggs.com">Reading Eggs</a></li>
+      <h6>reading & math</h6>
       <li><a href="htttps://teacherspayteachers.com">teachers pay teachers</a></li>
+      <h6>all subject content made by teachers</h6>
     </ul>
+    <br>
+    <form id="newsletter">
+       <h2>STAY UPDATED</h2>
+        <p>Join our newsletter to receive the latest homeschooling resources.</p>
+      <fieldset>
+        <label>
+          Enter Your First Name
+          <input type="text" name="username">
+        </label>
+        <label>
+          Email Address
+          <input type="email" name="Email">
+        </label>
+      </fieldset>
+      <button
+  type="submit"
+  class="inline-block rounded-full bg-success px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-success-3 transition duration-150 ease-in-out hover:bg-success-accent-300 hover:shadow-success-2 focus:bg-success-accent-300 focus:shadow-success-2 focus:outline-none focus:ring-0 active:bg-success-600 active:shadow-success-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
+  Subscribe
+</button> 
+    </form>
     
    </main>
    <footer></footer> 

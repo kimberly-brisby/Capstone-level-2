@@ -1,6 +1,7 @@
 body{
     display: flex;
-    background-color: bisque;
+    background-color: rgb(191, 236, 204);
+   
 }
 
 img{
@@ -8,5 +9,20 @@ img{
     width: 25vw;
     height: 25vh;
     
+}
+
+fieldset{
+    display: flex;
+}
+
+#navigation{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+h6{
+    font-style: italic;
+
 }
 
