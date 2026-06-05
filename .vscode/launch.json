@@ -17,6 +17,18 @@
             "name": "http://127.0.0.1:3000/Benefits-Obstacles.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/Benefits-Obstacles.html"
+        },
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3002/Benefits-Obstacles.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3002/Benefits-Obstacles.html"
+        },
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3002/Resources.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3002/Resources.html"
         }
     ]
 }
