@@ -8,7 +8,68 @@ const benefitsArray = ["BENEFITS","Flexibale learning envrionment: The freedom t
        "Targeted Social groups: you can set up inter-actions with like minded community, you become incontrol of peer groups and outings."];
 
     //    I want the loop to flip over like a flashcard
+    function renderContentListsContentLists(){
+        const obstacles = document.getElementById(obstacles-container);
+        const benefits = document.getElementById(benefits-container);
+        console.log(hi);
 
+        for (let i = 0; i < obstaclesArray.length; i++){
+           obstacles.innerHTML = "";
+           rray[i]}</li>)const obstaclesArray = ["OBSTACLES", "Time: There seems to be...", "Financial...", "Burnout...", "Socialization..."];
+const benefitsArray = ["BENEFITS", "Flexibale...", "The change...", "Envrionment...", "Targeted..."];
+
+function renderContentLists() { 
+  const obstacles = document.getElementById('obstacles-container'); 
+  const benefits = document.getElementById('benefits-container'); 
+  
+  // Renders the header, then loops through the rest automatically
+  obstacles.innerHTML = `<li class="w-full p-4 font-bold text-xl">${obstaclesArray[0]}</li>`; 
+  for (let i = 1; i < obstaclesArray.length; i++){ 
+    obstacles.innerHTML += `
+      <li class="w-full border-b-2 border-neutral-200 border-opacity-100 p-4 dark:border-white/10">
+        ${obstaclesArray[i]}
+      </li>
+    `;
+  } 
+
+  // Renders the header, then loops through the rest automatically
+  benefits.innerHTML = `<li class="w-full p-4 font-bold text-xl">${benefitsArray[0]}</li>`; 
+  for (let j = 1; j < benefitsArray.length; j++){ 
+    benefits.innerHTML += `
+      <li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4 dark:border-white/10">
+        ${benefitsArray[j]}
+      </li>
+    `;
+  } 
+} 
+
+renderContentLists();
+
+       }
+
+       for (let j = 0; j < benefitsArray.length; j++){
+    //          <li
+    //   class="w-full border-b-2 border-neutral-100 border-opacity-100 p-4  dark:border-white/10">
+    //   Flexibale learning envrionment: The freedom to learn how, where, and when you please. 
+    // </li>
+    // <li
+    //   class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">
+    //   The change of the pace: It is easier to pace your child(ren) acadaimic growth.
+    // </li>
+    // <li
+    //   class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">
+    //  Envrionment: Yes several parents fear of safety can be greatly reduced from outside hazards.
+    // </li>
+    // <li
+    //   class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">
+    //   Targeted Social groups: you can set up inter-actions with like minded community.
+    // </li>
+    // <li class="w-full p-4">Benefits</li>
+       }
+
+       renderContentLists();
+
+       };
 
 const form = document.querySelector("#newsletter");
 
@@ -25,11 +86,11 @@ function handleSubmit(event){
     };
     console.log(userData);
     // add user info to local storage
-//   localStorage.setItem("userName","userData.username");
-//   localStorage.setItem("userEmail","userData.email");
+  localStorage.setItem("userName","userData.username");
+  localStorage.setItem("userEmail","userData.email");
 localStorage.setItem("userData", JSON.stringify(userData));
 const storedUserData = localStorage.getItem("userData");
-// console.log(storedUserData);
+console.log(storedUserData);
 
 if(storedUserData){
     const userData = JSON.parse(storedUserData);
@@ -45,7 +106,7 @@ formTag.onsubmit = handleSubmit;
 
 async function handleSubmit(event){
     event.preventDefault();
-    const form = event.target;
+    const formTag = event.target;
 
     const data = {"api-key": cb612559bbf74a23a8917dfff4cdbb96};
     
