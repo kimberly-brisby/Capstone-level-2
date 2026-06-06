@@ -14,20 +14,13 @@ const benefits = document.getElementById("benefits-container");
 function renderContentLists(){
 
        for(let i = 1; i < obstaclesArray.length; i++){
-       obstacles.innerHTML = `<li class="w-full p-4">${obstaclesArray[0]}</li>`;
+        obstacles.innerHTML += `<li class="w-full p-4">${obstaclesArray[i]}</li>`;
         
-       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[1]}</li>`;
-       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[2]}</li>`;
-       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[3]}</li>`;
-       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[4]}</li>`;
+   
     }
         for(let j = 0; j < benefitsArray.length; j++){
-         benefits.innerHTML = ` <li class="w-full p-4">${benefitsArray[0]}</li>`;
-         
-       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[1]}</li>`;
-       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[2]}</li>`;
-       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[3]}</li>`;
-       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[4]}</li>`;
+         benefits.innerHTML += ` <li class="w-full p-4">${benefitsArray[j]}</li>`;  
+       
     
        }
     }
@@ -72,17 +65,19 @@ async function handleSubmit(event){
     event.preventDefault();
     const formTag = event.target;
 
-    const data = {"api-key": cb612559bbf74a23a8917dfff4cdbb96};
+    const data = {
+        catergory: form.elements.catergory.value,
+    };
     
     const queryString = new URLSearchParams(data);
-    const response = await fetch("https://www.affirmations.dev/" + queryString);
+    const response = await fetch("https://www.stands4.com/services/v2/quotes.php?uid=13733&tokenid=snpD9hCIJZ4W7WUj&searchtype=RANDOM" + queryString);
     const result = await response.json();
-    const affirmation = result.affirmation;
+    const affirmation = result[0].quote;
     const src = result.url;
-    console.log(affirmation);
+    console.log(quote);
 
 
-    const outputTag = document.getElementById("affrimation");
-    outputTag.innerText = affirmation;
+    const outputTag = document.getElementById("quote");
+    outputTag.innerText = quote;
 }
-console.log("affrim");
+console.log("quote");
