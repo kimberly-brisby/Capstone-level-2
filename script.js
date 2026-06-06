@@ -7,57 +7,59 @@ const benefitsArray = ["BENEFITS","Flexibale learning envrionment: The freedom t
         "Envrionment: This could free the stigma for a bully, distraction, or peer pressure free safe place.",
        "Targeted Social groups: you can set up inter-actions with like minded community, you become incontrol of peer groups and outings."];
 
+       
+
     //    I want the loop to flip over like a flashcard
-        
+
 
 const form = document.querySelector("#newsletter");
 
-form.onsubmit = handleSubmit;
-const output = document.getElementById("output");
+// form.onsubmit = handleSubmit;
+// const output = document.getElementById("output");
 
-function handleSubmit(event){
-    event.preventDefault();
-    const form = event.target;
+// function handleSubmit(event){
+//     event.preventDefault();
+//     const form = event.target;
 
-    const userData = {
-        firstname: form.elements.firstname.value,
-        email: form.elements.email.value,
-    };
-    console.log(userData);
-    // add user info to local storage
+//     const userData = {
+//         firstname: form.elements.firstname.value,
+//         email: form.elements.email.value,
+//     };
+//     console.log(userData);
+//     // add user info to local storage
 //   localStorage.setItem("userName","userData.username");
 //   localStorage.setItem("userEmail","userData.email");
-localStorage.setItem("userData", JSON.stringify(userData));
-const storedUserData = localStorage.getItem("userData");
+// localStorage.setItem("userData", JSON.stringify(userData));
+// const storedUserData = localStorage.getItem("userData");
 // console.log(storedUserData);
 
-if(storedUserData){
-    const userData = JSON.parse(storedUserData);
-     output.innerText = "You have successfully joined, " + userData.firstname + "!";  
-}else {
-     output.innerText = "Enter a valid email address."
-}
+// if(storedUserData){
+//     const userData = JSON.parse(storedUserData);
+//      output.innerText = "You have successfully joined, " + userData.firstname + "!";  
+// }else {
+//      output.innerText = "Enter a valid email address."
+// }
 
-};
+// };
     
-const formTag = document.getElementById("affrimForm");
-formTag.onsubmit = handleSubmit;
+// const formTag = document.getElementById("affrimForm");
+// formTag.onsubmit = handleSubmit;
 
-async function handleSubmit(event){
-    event.preventDefault();
-    const form = event.target;
+// async function handleSubmit(event){
+//     event.preventDefault();
+//     const formTag = event.target;
 
-    const data = {"api-key": cb612559bbf74a23a8917dfff4cdbb96};
+//     const data = {"api-key": cb612559bbf74a23a8917dfff4cdbb96};
     
-    const queryString = new URLSearchParams(data);
-    const response = await fetch("https://www.affirmations.dev/" + queryString);
-    const result = await response.json();
-    const affirmation = result.affirmation;
-    const src = result.url;
-    console.log(affirmation);
+//     const queryString = new URLSearchParams(data);
+//     const response = await fetch("https://www.affirmations.dev/" + queryString);
+//     const result = await response.json();
+//     const affirmation = result.affirmation;
+//     const src = result.url;
+//     console.log(affirmation);
 
 
-    const outputTag = document.getElementById("affrimation");
-    outputTag.innerText = affirmation;
-}
-console.log("affrim");
+//     const outputTag = document.getElementById("affrimation");
+//     outputTag.innerText = affirmation;
+// }
+// console.log("affrim");
