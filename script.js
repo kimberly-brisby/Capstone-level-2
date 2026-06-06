@@ -7,28 +7,27 @@ const benefitsArray = ["BENEFITS","Flexibale learning envrionment: The freedom t
         "Envrionment: This could free the stigma for a bully, distraction, or peer pressure free safe place.",
        "Targeted Social groups: you can set up inter-actions with like minded community, you become incontrol of peer groups and outings."];
 
-       
+ const obstacles = document.getElementById("obstacles-container");
+const benefits = document.getElementById("benefits-container");
 
     //    I want the loop to flip over like a flashcard
 function renderContentLists(){
 
-        const obstacles = document.getElementById("obstacles-container");
-        const benefits = document.getElementById("benefits-container");
-
-       
-       obstacles.innerHTML = `<li class="w-full p-4">${obstaclesArraybstacles[0]}</li>`;
-        for(let i = 1; i < obstaclesArray.length; i++){
-       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[i]}</li>`;
-       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[i]}</li>`;
-       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[i]}</li>`;
-       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[i]}</li>`;
+       for(let i = 1; i < obstaclesArray.length; i++){
+       obstacles.innerHTML = `<li class="w-full p-4">${obstaclesArray[0]}</li>`;
+        
+       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[1]}</li>`;
+       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[2]}</li>`;
+       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[3]}</li>`;
+       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[4]}</li>`;
     }
+        for(let j = 0; j < benefitsArray.length; j++){
          benefits.innerHTML = ` <li class="w-full p-4">${benefitsArray[0]}</li>`;
-         for(let j = 1; j < benefitsArray.length; j++){
-       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[j]}</li>`;
-       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[j]}</li>`;
-       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[j]}</li>`;
-       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[j]}</li>`;
+         
+       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[1]}</li>`;
+       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[2]}</li>`;
+       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[3]}</li>`;
+       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[4]}</li>`;
     
        }
     }
@@ -38,52 +37,52 @@ function renderContentLists(){
 
 const form = document.querySelector("#newsletter");
 
-// form.onsubmit = handleSubmit;
-// const output = document.getElementById("output");
+form.onsubmit = handleSubmit;
+const output = document.getElementById("output");
 
-// function handleSubmit(event){
-//     event.preventDefault();
-//     const form = event.target;
+function handleSubmit(event){
+    event.preventDefault();
+    const form = event.target;
 
-//     const userData = {
-//         firstname: form.elements.firstname.value,
-//         email: form.elements.email.value,
-//     };
-//     console.log(userData);
-//     // add user info to local storage
-//   localStorage.setItem("userName","userData.username");
-//   localStorage.setItem("userEmail","userData.email");
-// localStorage.setItem("userData", JSON.stringify(userData));
-// const storedUserData = localStorage.getItem("userData");
-// console.log(storedUserData);
+    const userData = {
+        firstname: form.elements.firstname.value,
+        email: form.elements.email.value,
+    };
+    console.log(userData);
+    // add user info to local storage
+  localStorage.setItem("userName","userData.username");
+  localStorage.setItem("userEmail","userData.email");
+localStorage.setItem("userData", JSON.stringify(userData));
+const storedUserData = localStorage.getItem("userData");
+console.log(storedUserData);
 
-// if(storedUserData){
-//     const userData = JSON.parse(storedUserData);
-//      output.innerText = "You have successfully joined, " + userData.firstname + "!";  
-// }else {
-//      output.innerText = "Enter a valid email address."
-// }
+if(storedUserData){
+    const userData = JSON.parse(storedUserData);
+     output.innerText = "You have successfully joined, " + userData.firstname + "!";  
+}else {
+     output.innerText = "Enter a valid email address."
+}
 
-// };
+};
     
-// const formTag = document.getElementById("affrimForm");
-// formTag.onsubmit = handleSubmit;
+const formTag = document.getElementById("affrimForm");
+formTag.onsubmit = handleSubmit;
 
-// async function handleSubmit(event){
-//     event.preventDefault();
-//     const formTag = event.target;
+async function handleSubmit(event){
+    event.preventDefault();
+    const formTag = event.target;
 
-//     const data = {"api-key": cb612559bbf74a23a8917dfff4cdbb96};
+    const data = {"api-key": cb612559bbf74a23a8917dfff4cdbb96};
     
-//     const queryString = new URLSearchParams(data);
-//     const response = await fetch("https://www.affirmations.dev/" + queryString);
-//     const result = await response.json();
-//     const affirmation = result.affirmation;
-//     const src = result.url;
-//     console.log(affirmation);
+    const queryString = new URLSearchParams(data);
+    const response = await fetch("https://www.affirmations.dev/" + queryString);
+    const result = await response.json();
+    const affirmation = result.affirmation;
+    const src = result.url;
+    console.log(affirmation);
 
 
-//     const outputTag = document.getElementById("affrimation");
-//     outputTag.innerText = affirmation;
-// }
-// console.log("affrim");
+    const outputTag = document.getElementById("affrimation");
+    outputTag.innerText = affirmation;
+}
+console.log("affrim");
