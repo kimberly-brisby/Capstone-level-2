@@ -10,7 +10,31 @@ const benefitsArray = ["BENEFITS","Flexibale learning envrionment: The freedom t
        
 
     //    I want the loop to flip over like a flashcard
+function renderContentLists(){
 
+        const obstacles = document.getElementById("obstacles-container");
+        const benefits = document.getElementById("benefits-container");
+
+       
+       obstacles.innerHTML = `<li class="w-full p-4">${obstaclesArraybstacles[0]}</li>`;
+        for(let i = 1; i < obstaclesArray.length; i++){
+       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[i]}</li>`;
+       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[i]}</li>`;
+       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[i]}</li>`;
+       obstacles.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${obstaclesArray[i]}</li>`;
+    }
+         benefits.innerHTML = ` <li class="w-full p-4">${benefitsArray[0]}</li>`;
+         for(let j = 1; j < benefitsArray.length; j++){
+       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[j]}</li>`;
+       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[j]}</li>`;
+       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[j]}</li>`;
+       benefits.innerHTML += `<li class="w-full border-b-2 border-neutral-200 border-opacity-300 p-4  dark:border-white/10">${benefitsArray[j]}</li>`;
+    
+       }
+    }
+            
+       
+       renderContentLists();
 
 const form = document.querySelector("#newsletter");
 
