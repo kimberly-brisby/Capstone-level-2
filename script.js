@@ -8,7 +8,7 @@ const benefitsArray = ["BENEFITS","Flexibale learning envrionment: The freedom t
        "Targeted Social groups: you can set up inter-actions with like minded community, you become incontrol of peer groups and outings."];
 
     //    I want the loop to flip over like a flashcard
-        for 
+        
 
 const form = document.querySelector("#newsletter");
 
