@@ -58,26 +58,3 @@ if(storedUserData){
 
 };
     
-const formTag = document.getElementById("affrimForm");
-formTag.onsubmit = handleSubmit;
-
-async function handleSubmit(event){
-    event.preventDefault();
-    const formTag = event.target;
-
-    const data = {
-        catergory: form.elements.catergory.value,
-    };
-    
-    const queryString = new URLSearchParams(data);
-    const response = await fetch("https://www.stands4.com/services/v2/quotes.php?uid=13733&tokenid=snpD9hCIJZ4W7WUj&searchtype=RANDOM" + queryString);
-    const result = await response.json();
-    const affirmation = result[0].quote;
-    const src = result.url;
-    console.log(quote);
-
-
-    const outputTag = document.getElementById("quote");
-    outputTag.innerText = quote;
-}
-console.log("quote");

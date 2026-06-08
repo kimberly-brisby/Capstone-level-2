@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
       <link rel="stylesheet" href="style.css" />
-      <script src="script.js" defer></script>
+      <script src="script2.js" defer></script>
       <link
   href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
   rel="stylesheet" />
@@ -162,12 +162,21 @@
       <h6>all subject content made by teachers(cost vary based on teacher set price)</h6>
     </ul>
     <br>
-    <form id="QuoteForm">
-      <input type="text" name="catergory">
+    <form id="quoteForm">
+      <label for="searchType">Get a quote by: </label>
+      <select id="searchType">
+        <option value="Choose...">Choose</option>
+        <option value="AUTHOR">Search by Author</option>
+        <option value="SEARCH">Search by Query</option>
+        <option value="RANDOM">Random Quote</option>
+      </select>
       
-      <button>Get Quote</button>
+      <label for="searchQuery">Search Query</label>
+      <input type="text" id="searchQuery">
+
+      <button type="submit">Submit</button>
     </form>
-    <output id="Affrimation"></output>
+    <div id="output"></div>
    </main>
    <footer></footer> 
 </body>
